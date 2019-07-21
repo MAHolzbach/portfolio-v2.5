@@ -1,22 +1,58 @@
+$linkcolour: #0000ff;
+
 .sideNavWrapper {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     rgba(0, 0, 0, 0.55) url("../images/skyline.jpg");
   background-size: cover;
   background-position: center;
+  padding: 24px;
+  color: white;
 
   @media (min-width: 426px) {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-evenly;
     position: fixed;
     width: 30%;
   }
 }
 .sideNavTitle {
-  margin: 0;
+  text-align: center;
+  margin: 40px 0 60px;
 }
 .sideNavLink {
   color: white;
   text-decoration: none;
+}
+.imageWrapper {
+  max-width: 150px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @media (min-width: 426px) {
+    width: 150px;
+  }
+}
+.text {
+  text-align: center;
+  line-height: 30px;
+
+  @media (min-width: 426px) {
+    line-height: 42px;
+  }
+}
+.socialLinks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.socialLink {
+  color: #d3d3d3;
+  font-size: 32px;
+
+  &:hover {
+    color: darken(#d3d3d3, 25%);
+  }
 }
