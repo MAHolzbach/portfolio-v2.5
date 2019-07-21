@@ -1,0 +1,12 @@
+.layoutWrapper {
+  display: block;
+
+  @media (min-width: 426px) {
+    display: flex;
+  }
+}
+.mainWrapper {
+  @media (min-width: 426px) {
+    margin-left: 30%;
+  }
+}

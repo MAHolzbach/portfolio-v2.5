@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import sideNavStyles from "./sidenav.module.css"
+import sideNavStyles from "./sidenav.module.scss"
 
 const SideNav = ({ siteTitle }) => (
   <div className={sideNavStyles.sideNavWrapper}>
