@@ -50,7 +50,7 @@ const IndexPage = () => (
       <h2 className={indexStyles.title}>What I do</h2>
       <p>
         I'm a front-end web developer specializing in React and pixel perfect
-        CSS. I have extensive experience working in Agile environment using
+        CSS. I have extensive experience working in an Agile environment using
         HTML5, CSS3/Sass, ES5/ES6, React, Redux, Git, and Webpack. Additionaly,
         I am familiar with Node.js and Express, AWS, and Jenkins.
       </p>
