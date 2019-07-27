@@ -9,8 +9,19 @@ const ProjectCard = props => (
       src={props.img}
       alt="Project"
     />
-    <p className={projectCardStyles.cardTitle}>{props.description}</p>
-    <p>{typeof props.img}</p>
+    <p className={projectCardStyles.cardText}>{props.description}</p>
+    <p className={projectCardStyles.cardText}>
+      <strong>Tools: </strong>
+      {props.tools}
+    </p>
+    <a
+      className={projectCardStyles.button}
+      href={props.url}
+      type="button"
+      target="_blank"
+    >
+      Visit
+    </a>
   </div>
 )
 
