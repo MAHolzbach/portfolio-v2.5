@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/project-card"
 import indexStyles from "./index.module.scss"
-import vhrLanding from "../images/project-images/vhr-landing.png"
+import vhrLanding from "../images/project-images/vhr-landing.PNG"
 
 const projectData = [
   {
