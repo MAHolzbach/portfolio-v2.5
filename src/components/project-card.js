@@ -4,6 +4,7 @@ import projectCardStyles from "./project-card.module.scss"
 
 const ProjectCard = props => (
   <div className={projectCardStyles.card}>
+    <h2 className={projectCardStyles.cardTitle}>{props.title}</h2>
     <img
       className={projectCardStyles.cardImage}
       src={props.img}
@@ -14,14 +15,19 @@ const ProjectCard = props => (
       <strong>Tools: </strong>
       {props.tools}
     </p>
-    <a
-      className={projectCardStyles.button}
-      href={props.url}
-      type="button"
-      target="_blank"
-    >
-      Visit
-    </a>
+    <div className={projectCardStyles.buttonWrapper}>
+      {props.loginRequired && (
+        <Link className={projectCardStyles.button}>Details</Link>
+      )}
+      <a
+        className={projectCardStyles.button}
+        href={props.url}
+        type="button"
+        target="_blank"
+      >
+        Visit
+      </a>
+    </div>
   </div>
 )
 

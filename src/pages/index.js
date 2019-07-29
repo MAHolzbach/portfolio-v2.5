@@ -4,42 +4,36 @@ import SEO from "../components/seo"
 import ProjectCard from "../components/project-card"
 import indexStyles from "./index.module.scss"
 import vhrLanding from "../images/vhr-landing.png"
+import showroom from "../images/showroom.png"
+import ratingsAndReviews from "../images/ratings-and-reviews.png"
 
 const projectData = [
   {
+    title: "Carfax VHR Landing Page",
     img: vhrLanding,
     description:
       "Carfax's landing page for Vehicle History Reports, the company's flagship product.",
-    tools: "Pug, Sass, ES6, and Webpack.",
+    tools: "Pug, Sass, ES6, Webpack, and RESTful API consumption.",
     url: "https://www.carfax.com/vehicle-history-reports/",
+    logInRequired: false,
   },
   {
-    img: vhrLanding,
+    title: "Carfax Showroom",
+    img: showroom,
     description:
-      "A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice. A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice.",
-    tools: "Pug, Sass, ES6, and Webpack.",
-    url: "https://www.carfax.com/vehicle-history-reports/",
+      "This site is the central location for Carfax's customers to run Vehicle History Reports and view reports they have run in the past.",
+    tools: "React, Pug, Sass, ES6, Webpack, and RESTful API consumption.",
+    url: "https://www.carfax.com/signin",
+    logInRequired: true,
   },
   {
-    img: vhrLanding,
+    title: "Carfax Ratings and Reviews",
+    img: ratingsAndReviews,
     description:
-      "A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice.",
-    tools: "Pug, Sass, ES6, and Webpack.",
-    url: "https://www.carfax.com/vehicle-history-reports/",
-  },
-  {
-    img: vhrLanding,
-    description:
-      "A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice.",
-    tools: "Pug, Sass, ES6, and Webpack.",
-    url: "https://www.carfax.com/vehicle-history-reports/",
-  },
-  {
-    img: vhrLanding,
-    description:
-      "A current project: Using React, ES6, and the NY Times API to render their top stories or a topic of your choice.",
-    tools: "Pug, Sass, ES6, and Webpack.",
-    url: "https://www.carfax.com/vehicle-history-reports/",
+      "Here Carfax users can view and edit any review they have provided for a car dealership or service shop for whom they have left a review.",
+    tools: "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
+    url: "https://www.carfax.com/signin",
+    logInRequired: true,
   },
 ]
 
@@ -60,10 +54,12 @@ const IndexPage = () => (
         {projectData.map((project, i) => (
           <ProjectCard
             key={i}
+            title={project.title}
             img={project.img}
             description={project.description}
             tools={project.tools}
             url={project.url}
+            loginRequired={project.logInRequired}
           />
         ))}
       </div>
