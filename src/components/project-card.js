@@ -16,11 +16,9 @@ const ProjectCard = props => (
       {props.tools}
     </p>
     <div className={projectCardStyles.buttonWrapper}>
-      {props.loginRequired && (
-        <Link className={projectCardStyles.button} to={props.page}>
-          Details
-        </Link>
-      )}
+      <Link className={projectCardStyles.button} to={props.page}>
+        Details
+      </Link>
       <a
         className={projectCardStyles.button}
         href={props.url}

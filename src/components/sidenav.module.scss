@@ -19,7 +19,7 @@
   }
 }
 .pageSideNavWrapper {
-  height: 16vh;
+  height: 18vh;
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     rgba(0, 0, 0, 0.55) url("../images/skyline.jpg");
   background-size: cover;
@@ -45,7 +45,6 @@
 }
 .pageSideNavTitle {
   text-align: center;
-  margin: 0 0 60px;
   letter-spacing: 2px;
 
   @media (min-width: 426px) {
@@ -80,7 +79,7 @@
   line-height: 30px;
 
   @media (min-width: 426px) {
-    line-height: 42px;
+    line-height: 34px;
   }
 }
 .socialLinks {

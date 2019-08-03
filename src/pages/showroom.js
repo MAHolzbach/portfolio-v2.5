@@ -10,9 +10,7 @@ const showroomProjectData = {
   tools:
     "React, Pug, Sass, ES6, Webpack, Enzyme/Jest, and RESTful API consumption.",
   task:
-    "Create a central place where Carfax users can run and view Vehicle History Reports.",
-  purpose:
-    "Modernize and simplify user's experience while improving conversion and driving traffic to the purchase page.",
+    "Create a central place where Carfax users can run and view Vehicle History Reports in order to modernize and simplify user's experience while improving conversion and driving traffic to the purchase page.",
   challenges:
     "Keeping the site fast despite a heavy data fetch. Creating that data fetch from multiple endpoints. What to test?",
   results:

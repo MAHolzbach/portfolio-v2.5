@@ -15,7 +15,7 @@ const projectData = [
       "Carfax's landing page for Vehicle History Reports, the company's flagship product.",
     tools: "Pug, Sass, ES6, Webpack, and RESTful API consumption.",
     url: "https://www.carfax.com/vehicle-history-reports/",
-    logInRequired: false,
+    page: "/vhr-landing",
   },
   {
     title: "Carfax Showroom",
@@ -25,7 +25,6 @@ const projectData = [
     tools:
       "React, Pug, Sass, ES6, Webpack, Enzyme/Jest, and RESTful API consumption.",
     url: "https://www.carfax.com/signin",
-    logInRequired: true,
     page: "/showroom",
   },
   {
@@ -35,7 +34,6 @@ const projectData = [
       "Here Carfax users can view and edit any review they have provided for a car dealership or service shop for whom they have left a review.",
     tools: "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
     url: "https://www.carfax.com/signin",
-    logInRequired: true,
     page: "/ratings-and-reviews",
   },
 ]
@@ -62,7 +60,6 @@ const IndexPage = () => (
             description={project.description}
             tools={project.tools}
             url={project.url}
-            loginRequired={project.logInRequired}
             page={project.page}
           />
         ))}
