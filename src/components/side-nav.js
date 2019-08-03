@@ -23,7 +23,13 @@ const SideNav = ({ detailsPage, siteTitle }) => (
         {siteTitle}
       </Link>
     </h1>
-    <div className={sideNavStyles.imageTextWrapper}>
+    <div
+      className={
+        detailsPage
+          ? sideNavStyles.pageImageTextWrapper
+          : sideNavStyles.imageTextWrapper
+      }
+    >
       <div className={sideNavStyles.imageWrapper}>
         <MeImage />
       </div>
