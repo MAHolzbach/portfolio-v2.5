@@ -17,7 +17,9 @@ const ProjectCard = props => (
     </p>
     <div className={projectCardStyles.buttonWrapper}>
       {props.loginRequired && (
-        <Link className={projectCardStyles.button}>Details</Link>
+        <Link className={projectCardStyles.button} to={props.page}>
+          Details
+        </Link>
       )}
       <a
         className={projectCardStyles.button}

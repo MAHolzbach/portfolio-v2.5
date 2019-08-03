@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ProjectCard from "../components/project-card"
 import indexStyles from "./index.module.scss"
+import ProjectCard from "../components/project-card"
 import vhrLanding from "../images/vhr-landing.png"
 import showroom from "../images/showroom.png"
 import ratingsAndReviews from "../images/ratings-and-reviews.png"
@@ -22,9 +22,11 @@ const projectData = [
     img: showroom,
     description:
       "This site is the central location for Carfax's customers to run Vehicle History Reports and view reports they have run in the past.",
-    tools: "React, Pug, Sass, ES6, Webpack, and RESTful API consumption.",
+    tools:
+      "React, Pug, Sass, ES6, Webpack, Enzyme/Jest, and RESTful API consumption.",
     url: "https://www.carfax.com/signin",
     logInRequired: true,
+    page: "/showroom",
   },
   {
     title: "Carfax Ratings and Reviews",
@@ -34,6 +36,7 @@ const projectData = [
     tools: "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
     url: "https://www.carfax.com/signin",
     logInRequired: true,
+    page: "/ratings-and-reviews",
   },
 ]
 
@@ -60,6 +63,7 @@ const IndexPage = () => (
             tools={project.tools}
             url={project.url}
             loginRequired={project.logInRequired}
+            page={project.page}
           />
         ))}
       </div>
