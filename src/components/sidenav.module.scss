@@ -18,13 +18,50 @@
     height: 100%;
   }
 }
+.pageSideNavWrapper {
+  height: 16vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    rgba(0, 0, 0, 0.55) url("../images/skyline.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 24px;
+  color: white;
+  position: relative;
+
+  @media (min-width: 426px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 30%;
+    height: 100%;
+  }
+}
 .sideNavTitle {
   text-align: center;
   margin: 40px 0 60px;
+  letter-spacing: 2px;
+}
+.pageSideNavTitle {
+  text-align: center;
+  margin: 0 0 60px;
+  letter-spacing: 2px;
+
+  @media (min-width: 426px) {
+    margin: 40px 0 60px;
+  }
 }
 .sideNavLink {
   color: white;
   text-decoration: none;
+}
+.imageTextWrapper {
+  display: none;
+
+  @media (min-width: 426px) {
+    display: block;
+  }
 }
 .imageWrapper {
   max-width: 150px;

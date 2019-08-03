@@ -5,7 +5,7 @@ import layoutStyles from "./layout.module.scss"
 import SideNav from "./side-nav"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ detailsPage, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,7 +19,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className={layoutStyles.layoutWrapper}>
-        <SideNav siteTitle={data.site.siteMetadata.title} />
+        <SideNav
+          siteTitle={data.site.siteMetadata.title}
+          detailsPage={detailsPage}
+        />
         <main className={layoutStyles.mainWrapper}>{children}</main>
       </div>
     </>

@@ -26,6 +26,7 @@ const ProjectCard = props => (
         href={props.url}
         type="button"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Visit
       </a>

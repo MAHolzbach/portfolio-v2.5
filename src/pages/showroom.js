@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import showroomStyles from "./showroom.module.scss"
 import Details from "../components/details"
 
 const showroomProjectData = {
@@ -24,7 +23,7 @@ const showroomProjectData = {
 }
 
 const showroomDetailsPage = () => (
-  <Layout>
+  <Layout detailsPage={true}>
     <SEO title="Showroom" />
     <Details data={showroomProjectData} />
   </Layout>

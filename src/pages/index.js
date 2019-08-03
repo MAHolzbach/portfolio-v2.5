@@ -41,7 +41,7 @@ const projectData = [
 ]
 
 const IndexPage = () => (
-  <Layout>
+  <Layout detailsPage={false}>
     <SEO title="Home" />
     <div className={indexStyles.index}>
       <h2 className={indexStyles.title}>What I do</h2>
