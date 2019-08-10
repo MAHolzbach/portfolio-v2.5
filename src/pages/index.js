@@ -6,7 +6,6 @@ import indexStyles from "./index.module.scss"
 import ProjectCard from "../components/project-card"
 
 const IndexPage = ({ data }) => {
-  console.log("data", data)
   return (
     <Layout detailsPage={false}>
       <SEO title="Home" />
@@ -50,6 +49,7 @@ export const query = graphql`
           cardPage
           cardTitle
           cardUrl
+          tools
           id
         }
       }
