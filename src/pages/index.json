@@ -1,0 +1,27 @@
+[
+  {
+    "cardTitle": "Carfax VHR Landing Page",
+    "cardImg": "vhr-landing.png",
+    "cardDescription": "Carfax's landing page for Vehicle History Reports, the company's flagship product.",
+    "tools": "Pug, Sass, ES6, Webpack, and RESTful API consumption.",
+    "cardUrl": "https://www.carfax.com/vehicle-history-reports/",
+    "cardPage": "/vhr-landing"
+  },
+
+  {
+    "cardTitle": "Carfax Showroom",
+    "cardImg": "showroom.png",
+    "cardDescription": "This site is the central location for Carfax's customers to run Vehicle History Reports and view reports they have run in the past.",
+    "tools": "React, Pug, Sass, ES6, Webpack, Enzyme/Jest, and RESTful API consumption.",
+    "cardUrl": "https://www.carfax.com/signin",
+    "cardPage": "/showroom"
+  },
+  {
+    "cardTitle": "Carfax Ratings and Reviews",
+    "cardImg": "ratings-and-reviews.png",
+    "cardDescription": "Here Carfax users can view and edit any review they have provided for a car dealership or service shop for whom they have left a review.",
+    "tools": "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
+    "cardUrl": "https://www.carfax.com/signin",
+    "cardPage": "/ratings-and-reviews"
+  }
+]
