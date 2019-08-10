@@ -57,12 +57,14 @@
 }
 .imageTextWrapper {
   display: block;
+  height: 50%;
 }
 .pageImageTextWrapper {
   display: none;
 
   @media (min-width: 426px) {
     display: block;
+    height: 50%;
   }
 }
 .imageWrapper {
@@ -95,6 +97,6 @@
   font-size: 32px;
 
   &:hover {
-    color: darken(#d3d3d3, 25%);
+    color: #1c4ad2;
   }
 }

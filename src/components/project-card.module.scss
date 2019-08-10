@@ -26,7 +26,6 @@
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: 60px;
-  border: 4px solid #3498db;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,9 +33,9 @@
   height: 45px;
   text-decoration: none;
   color: white;
-  background-color: #3498db;
+  background-color: #1c4ad2;
 
   &:hover {
-    background-color: darken(#3498db, 5%);
+    background-color: lighten(#1c4ad2, 10%);
   }
 }
