@@ -26,6 +26,7 @@ const IndexPage = ({ data }) => {
               key={node.id}
               title={node.cardTitle}
               img={require("../images/" + node.cardImg)}
+              altImg={require("../images/" + node.altCardImg)}
               description={node.cardDescription}
               tools={node.tools}
               url={node.cardUrl}
@@ -47,6 +48,7 @@ export const query = graphql`
         node {
           cardDescription
           cardImg
+          altCardImg
           cardPage
           cardTitle
           cardUrl
