@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import detailsStyles from "./details.module.scss"
 import { FaArrowLeft, FaChevronRight, FaChevronDown } from "react-icons/fa"
+import ShowroomDesktopImage from "../components/showroom-desktop-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(false)
@@ -80,6 +81,7 @@ const Details = ({ data }) => {
             {detailsTeam}
           </p>
         </div>
+        {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
       </div>
     </Layout>
   )
