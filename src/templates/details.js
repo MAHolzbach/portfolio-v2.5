@@ -6,6 +6,8 @@ import detailsStyles from "./details.module.scss"
 import { FaArrowLeft, FaChevronRight, FaChevronDown } from "react-icons/fa"
 import ShowroomDesktopImage from "../components/showroom-desktop-img"
 import ShowroomMobileImage from "../components/showroom-mobile-img"
+import VhrLandingDesktopImage from "../components/vhr-landing-desktop-img"
+import VhrLandingMobileImage from "../components/vhr-landing-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -20,6 +22,7 @@ const Details = ({ data }) => {
     detailsResults,
     detailsComments,
     detailsTeam,
+    visitUrl,
   } = data.pagesJson
 
   const handleToggleClick = e => {
@@ -62,12 +65,8 @@ const Details = ({ data }) => {
         <h1 className={detailsStyles.projectTitle}>{detailsTitle}</h1>
         <p className={detailsStyles.subtitle}>
           {detailsSubtitle}
-          <a
-            href="https://www.carfax.com/signin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Carfax Signin
+          <a href={`${visitUrl}`} target="_blank" rel="noopener noreferrer">
+            Carfax
           </a>
         </p>
         <div className={detailsStyles.toggleWrapper}>
@@ -151,6 +150,9 @@ const Details = ({ data }) => {
             }
           >
             {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
+            {detailsTitle === "Vehicle History Report Landing Page" && (
+              <VhrLandingDesktopImage />
+            )}
           </div>
           <div
             className={`${detailsStyles.mobileImageWrapper}
@@ -161,6 +163,9 @@ const Details = ({ data }) => {
               }`}
           >
             {detailsTitle === "Showroom" && <ShowroomMobileImage />}
+            {detailsTitle === "Vehicle History Report Landing Page" && (
+              <VhrLandingMobileImage />
+            )}
           </div>
         </>
       </div>
@@ -181,6 +186,7 @@ export const query = graphql`
       detailsTeam
       detailsTitle
       tools
+      visitUrl
     }
   }
 `
