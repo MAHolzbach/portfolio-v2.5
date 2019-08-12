@@ -50,6 +50,10 @@
   margin: 0 2px;
   width: 92px;
 
+  * {
+    pointer-events: none;
+  }
+
   &:focus {
     outline: 0;
   }
@@ -83,8 +87,8 @@
   font-weight: 700;
 }
 .subtitle {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
 }
 .text {
   font-size: 18px;
