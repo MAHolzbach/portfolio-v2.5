@@ -4,9 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import detailsStyles from "./details.module.scss"
 import { FaArrowLeft, FaChevronRight, FaChevronDown } from "react-icons/fa"
+import ShowroomDesktopImage from "../components/showroom-desktop-img"
+import ShowroomMobileImage from "../components/showroom-mobile-img"
 
 const Details = ({ data }) => {
-  const [infoTextOpen, setInfoTextOpen] = useState(false)
+  const [infoTextOpen, setInfoTextOpen] = useState(true)
+  const [desktopImageOpen, setDesktopImageOpen] = useState(false)
+  const [mobileImageOpen, setMobileImageOpen] = useState(false)
   const {
     detailsTitle,
     detailsSubtitle,
@@ -17,6 +21,36 @@ const Details = ({ data }) => {
     detailsComments,
     detailsTeam,
   } = data.pagesJson
+
+  const handleToggleClick = e => {
+    const isMobile = window.innerWidth <= 426
+
+    switch (e.target.id) {
+      case "textToggle":
+        setInfoTextOpen(!infoTextOpen)
+        if (isMobile) {
+          setDesktopImageOpen(false)
+          setMobileImageOpen(false)
+        }
+        break
+      case "desktopImageToggle":
+        setDesktopImageOpen(!desktopImageOpen)
+        setMobileImageOpen(false)
+        if (isMobile) {
+          setInfoTextOpen(false)
+        }
+        break
+      case "mobileImageToggle":
+        setMobileImageOpen(!mobileImageOpen)
+        setDesktopImageOpen(false)
+        if (isMobile) {
+          setInfoTextOpen(false)
+        }
+        break
+      default:
+        break
+    }
+  }
 
   return (
     <Layout detailsPage={true}>
@@ -36,22 +70,50 @@ const Details = ({ data }) => {
             Carfax Signin
           </a>
         </p>
-        <p
-          className={detailsStyles.infoToggle}
-          onClick={() => setInfoTextOpen(!infoTextOpen)}
-        >
-          {infoTextOpen ? (
-            <FaChevronDown className={detailsStyles.icon} />
-          ) : (
-            <FaChevronRight className={detailsStyles.icon} />
-          )}
-          Project Details
-        </p>
+        <div className={detailsStyles.toggleWrapper}>
+          <button
+            id="textToggle"
+            className={detailsStyles.infoToggle}
+            onClick={e => handleToggleClick(e)}
+          >
+            {infoTextOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Project Details
+          </button>
+          <button
+            id="desktopImageToggle"
+            className={detailsStyles.infoToggle}
+            onClick={e => handleToggleClick(e)}
+          >
+            {desktopImageOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Desktop View
+          </button>
+          <button
+            id="mobileImageToggle"
+            className={detailsStyles.infoToggle}
+            onClick={e => handleToggleClick(e)}
+          >
+            {mobileImageOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Mobile View
+          </button>
+        </div>
+        <hr />
         <div
           className={
             infoTextOpen
-              ? detailsStyles.infoTextOpen
-              : detailsStyles.infoTextClosed
+              ? detailsStyles.containerOpen
+              : detailsStyles.containerClosed
           }
           id="infoTextWrapper"
         >
@@ -76,10 +138,31 @@ const Details = ({ data }) => {
             {detailsComments}
           </p>
           <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Adventuring Party: </span>
+            <span className={detailsStyles.boldText}>Team Members: </span>
             {detailsTeam}
           </p>
         </div>
+        <>
+          <div
+            className={
+              desktopImageOpen
+                ? detailsStyles.containerOpen
+                : detailsStyles.containerClosed
+            }
+          >
+            {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
+          </div>
+          <div
+            className={`${detailsStyles.mobileImageWrapper}
+              ${
+                mobileImageOpen
+                  ? detailsStyles.containerOpen
+                  : detailsStyles.containerClosed
+              }`}
+          >
+            {detailsTitle === "Showroom" && <ShowroomMobileImage />}
+          </div>
+        </>
       </div>
     </Layout>
   )
