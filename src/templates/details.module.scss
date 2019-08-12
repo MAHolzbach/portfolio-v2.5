@@ -26,6 +26,11 @@
   margin: -3px 8px 0 0;
   vertical-align: middle;
 }
+.toggleWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .infoToggle {
   cursor: pointer;
   width: fit-content;
@@ -35,11 +40,11 @@
     font-weight: 700;
   }
 }
-.infoTextClosed {
+.containerClosed {
   height: 0;
   overflow: hidden;
 }
-.infoTextOpen {
+.containerOpen {
   height: auto;
 }
 .boldText {

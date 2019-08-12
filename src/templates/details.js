@@ -5,9 +5,12 @@ import Layout from "../components/layout"
 import detailsStyles from "./details.module.scss"
 import { FaArrowLeft, FaChevronRight, FaChevronDown } from "react-icons/fa"
 import ShowroomDesktopImage from "../components/showroom-desktop-img"
+import ShowroomMobileImage from "../components/showroom-mobile-img"
 
 const Details = ({ data }) => {
-  const [infoTextOpen, setInfoTextOpen] = useState(false)
+  const [infoTextOpen, setInfoTextOpen] = useState(true)
+  const [desktopImageOpen, setDesktopImageOpen] = useState(false)
+  const [mobileImageOpen, setMobileImageOpen] = useState(false)
   const {
     detailsTitle,
     detailsSubtitle,
@@ -37,22 +40,52 @@ const Details = ({ data }) => {
             Carfax Signin
           </a>
         </p>
-        <p
-          className={detailsStyles.infoToggle}
-          onClick={() => setInfoTextOpen(!infoTextOpen)}
-        >
-          {infoTextOpen ? (
-            <FaChevronDown className={detailsStyles.icon} />
-          ) : (
-            <FaChevronRight className={detailsStyles.icon} />
-          )}
-          Project Details
-        </p>
+        <div className={detailsStyles.toggleWrapper}>
+          <p
+            className={detailsStyles.infoToggle}
+            onClick={() => setInfoTextOpen(!infoTextOpen)}
+          >
+            {infoTextOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Project Details
+          </p>
+          <p
+            className={detailsStyles.infoToggle}
+            onClick={() => {
+              setDesktopImageOpen(!desktopImageOpen)
+              setMobileImageOpen(false)
+            }}
+          >
+            {desktopImageOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Desktop View
+          </p>
+          <p
+            className={detailsStyles.infoToggle}
+            onClick={() => {
+              setMobileImageOpen(!mobileImageOpen)
+              setDesktopImageOpen(false)
+            }}
+          >
+            {mobileImageOpen ? (
+              <FaChevronDown className={detailsStyles.icon} />
+            ) : (
+              <FaChevronRight className={detailsStyles.icon} />
+            )}
+            Mobile View
+          </p>
+        </div>
         <div
           className={
             infoTextOpen
-              ? detailsStyles.infoTextOpen
-              : detailsStyles.infoTextClosed
+              ? detailsStyles.containerOpen
+              : detailsStyles.containerClosed
           }
           id="infoTextWrapper"
         >
@@ -77,11 +110,31 @@ const Details = ({ data }) => {
             {detailsComments}
           </p>
           <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Adventuring Party: </span>
+            <span className={detailsStyles.boldText}>Team Members: </span>
             {detailsTeam}
           </p>
         </div>
-        {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
+        <>
+          <div
+            className={
+              desktopImageOpen
+                ? detailsStyles.containerOpen
+                : detailsStyles.containerClosed
+            }
+          >
+            {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
+          </div>
+          <div
+            className={
+              mobileImageOpen
+                ? detailsStyles.containerOpen
+                : detailsStyles.containerClosed
+            }
+          >
+            {" "}
+            {detailsTitle === "Showroom" && <ShowroomMobileImage />}
+          </div>
+        </>
       </div>
     </Layout>
   )
