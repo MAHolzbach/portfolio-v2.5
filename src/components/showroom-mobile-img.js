@@ -9,7 +9,7 @@ const ShowroomMobileImage = () => {
         relativePath: { eq: "images/showroom-mobile.webp" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -22,6 +22,36 @@ const Details = ({ data }) => {
     detailsTeam,
   } = data.pagesJson
 
+  const handleToggleClick = e => {
+    const isMobile = window.innerWidth <= 426
+
+    switch (e.target.id) {
+      case "textToggle":
+        setInfoTextOpen(!infoTextOpen)
+        if (isMobile) {
+          setDesktopImageOpen(false)
+          setMobileImageOpen(false)
+        }
+        break
+      case "desktopImageToggle":
+        setDesktopImageOpen(!desktopImageOpen)
+        setMobileImageOpen(false)
+        if (isMobile) {
+          setInfoTextOpen(false)
+        }
+        break
+      case "mobileImageToggle":
+        setMobileImageOpen(!mobileImageOpen)
+        setDesktopImageOpen(false)
+        if (isMobile) {
+          setInfoTextOpen(false)
+        }
+        break
+      default:
+        break
+    }
+  }
+
   return (
     <Layout detailsPage={true}>
       <div className={detailsStyles.container}>
@@ -41,9 +71,10 @@ const Details = ({ data }) => {
           </a>
         </p>
         <div className={detailsStyles.toggleWrapper}>
-          <p
+          <button
+            id="textToggle"
             className={detailsStyles.infoToggle}
-            onClick={() => setInfoTextOpen(!infoTextOpen)}
+            onClick={e => handleToggleClick(e)}
           >
             {infoTextOpen ? (
               <FaChevronDown className={detailsStyles.icon} />
@@ -51,13 +82,11 @@ const Details = ({ data }) => {
               <FaChevronRight className={detailsStyles.icon} />
             )}
             Project Details
-          </p>
-          <p
+          </button>
+          <button
+            id="desktopImageToggle"
             className={detailsStyles.infoToggle}
-            onClick={() => {
-              setDesktopImageOpen(!desktopImageOpen)
-              setMobileImageOpen(false)
-            }}
+            onClick={e => handleToggleClick(e)}
           >
             {desktopImageOpen ? (
               <FaChevronDown className={detailsStyles.icon} />
@@ -65,13 +94,11 @@ const Details = ({ data }) => {
               <FaChevronRight className={detailsStyles.icon} />
             )}
             Desktop View
-          </p>
-          <p
+          </button>
+          <button
+            id="mobileImageToggle"
             className={detailsStyles.infoToggle}
-            onClick={() => {
-              setMobileImageOpen(!mobileImageOpen)
-              setDesktopImageOpen(false)
-            }}
+            onClick={e => handleToggleClick(e)}
           >
             {mobileImageOpen ? (
               <FaChevronDown className={detailsStyles.icon} />
@@ -79,8 +106,9 @@ const Details = ({ data }) => {
               <FaChevronRight className={detailsStyles.icon} />
             )}
             Mobile View
-          </p>
+          </button>
         </div>
+        <hr />
         <div
           className={
             infoTextOpen
@@ -125,13 +153,13 @@ const Details = ({ data }) => {
             {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
           </div>
           <div
-            className={
-              mobileImageOpen
-                ? detailsStyles.containerOpen
-                : detailsStyles.containerClosed
-            }
+            className={`${detailsStyles.mobileImageWrapper}
+              ${
+                mobileImageOpen
+                  ? detailsStyles.containerOpen
+                  : detailsStyles.containerClosed
+              }`}
           >
-            {" "}
             {detailsTitle === "Showroom" && <ShowroomMobileImage />}
           </div>
         </>
