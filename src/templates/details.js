@@ -8,6 +8,8 @@ import ShowroomDesktopImage from "../components/showroom-desktop-img"
 import ShowroomMobileImage from "../components/showroom-mobile-img"
 import VhrLandingDesktopImage from "../components/vhr-landing-desktop-img"
 import VhrLandingMobileImage from "../components/vhr-landing-mobile-img"
+import PurchaseDesktopImage from "../components/purchase-desktop-img"
+import PurchaseMobileImage from "../components/purchase-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -153,6 +155,9 @@ const Details = ({ data }) => {
             {detailsTitle === "Vehicle History Report Landing Page" && (
               <VhrLandingDesktopImage />
             )}
+            {detailsTitle === "Carfax Purchase Page" && (
+              <PurchaseDesktopImage />
+            )}
           </div>
           <div
             className={`${detailsStyles.mobileImageWrapper}
@@ -166,6 +171,7 @@ const Details = ({ data }) => {
             {detailsTitle === "Vehicle History Report Landing Page" && (
               <VhrLandingMobileImage />
             )}
+            {detailsTitle === "Carfax Purchase Page" && <PurchaseMobileImage />}
           </div>
         </>
       </div>

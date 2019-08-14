@@ -26,5 +26,14 @@
     "tools": "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
     "cardUrl": "https://www.carfax.com/signin",
     "cardPage": "/ratings-and-reviews"
+  },
+  {
+    "cardTitle": "Carfax Purchase Page",
+    "cardImg": "purchase.webp",
+    "altCardImg": "purchase.jpg",
+    "cardDescription": "This was intended to be Carfax's central payment page where customers could purchase Vehicle History Reports. Failed A/B testing led to the old(current) site being maintained.",
+    "tools": "Sass, ES5/6, jQuery, Java, and RESTful API consumption.",
+    "cardUrl": "https://secure.carfax.com/creditCard.cfx",
+    "cardPage": "/purchase-page"
   }
 ]
