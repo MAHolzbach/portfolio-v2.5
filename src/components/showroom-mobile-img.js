@@ -6,11 +6,11 @@ const ShowroomMobileImage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
-        relativePath: { eq: "images/showroom-mobile.webp" }
+        relativePath: { eq: "images/showroom-mobile.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
