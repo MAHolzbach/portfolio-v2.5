@@ -10,6 +10,8 @@ import VhrLandingDesktopImage from "../components/vhr-landing-desktop-img"
 import VhrLandingMobileImage from "../components/vhr-landing-mobile-img"
 import PurchaseDesktopImage from "../components/purchase-desktop-img"
 import PurchaseMobileImage from "../components/purchase-mobile-img"
+import RatingsDesktopImage from "../components/ratings-desktop-img"
+import RatingsMobileImage from "../components/ratings-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -158,6 +160,9 @@ const Details = ({ data }) => {
             {detailsTitle === "Carfax Purchase Page" && (
               <PurchaseDesktopImage />
             )}
+            {detailsTitle === "Carfax Ratings and Reviews" && (
+              <RatingsDesktopImage />
+            )}
           </div>
           <div
             className={`${detailsStyles.mobileImageWrapper}
@@ -172,6 +177,9 @@ const Details = ({ data }) => {
               <VhrLandingMobileImage />
             )}
             {detailsTitle === "Carfax Purchase Page" && <PurchaseMobileImage />}
+            {detailsTitle === "Carfax Ratings and Reviews" && (
+              <RatingsMobileImage />
+            )}
           </div>
         </>
       </div>
