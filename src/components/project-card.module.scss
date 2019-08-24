@@ -10,7 +10,7 @@
   margin: 16px 0;
   padding: 8px;
 
-  @media (min-width: 436px) {
+  @media (min-width: 426px) {
     height: fit-content;
     margin: 16px 24px;
     width: 450px;
@@ -18,6 +18,11 @@
 }
 .cardTitle {
   text-align: center;
+}
+.cardImage {
+  @media (min-width: 426px) {
+    height: 350px;
+  }
 }
 .buttonWrapper {
   display: flex;

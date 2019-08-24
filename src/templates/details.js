@@ -10,6 +10,10 @@ import VhrLandingDesktopImage from "../components/vhr-landing-desktop-img"
 import VhrLandingMobileImage from "../components/vhr-landing-mobile-img"
 import PurchaseDesktopImage from "../components/purchase-desktop-img"
 import PurchaseMobileImage from "../components/purchase-mobile-img"
+import RatingsDesktopImage from "../components/ratings-desktop-img"
+import RatingsMobileImage from "../components/ratings-mobile-img"
+import RecordCheckDesktopImage from "../components/record-check-desktop-img"
+import RecordCheckMobileImage from "../components/record-check-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -67,9 +71,11 @@ const Details = ({ data }) => {
         <h1 className={detailsStyles.projectTitle}>{detailsTitle}</h1>
         <p className={detailsStyles.subtitle}>
           {detailsSubtitle}
-          <a href={`${visitUrl}`} target="_blank" rel="noopener noreferrer">
-            Carfax
-          </a>
+          {visitUrl !== null && (
+            <a href={`${visitUrl}`} target="_blank" rel="noopener noreferrer">
+              Carfax
+            </a>
+          )}
         </p>
         <div className={detailsStyles.toggleWrapper}>
           <button
@@ -158,6 +164,12 @@ const Details = ({ data }) => {
             {detailsTitle === "Carfax Purchase Page" && (
               <PurchaseDesktopImage />
             )}
+            {detailsTitle === "Carfax Ratings and Reviews" && (
+              <RatingsDesktopImage />
+            )}
+            {detailsTitle === "Carfax Record Check" && (
+              <RecordCheckDesktopImage />
+            )}
           </div>
           <div
             className={`${detailsStyles.mobileImageWrapper}
@@ -172,6 +184,12 @@ const Details = ({ data }) => {
               <VhrLandingMobileImage />
             )}
             {detailsTitle === "Carfax Purchase Page" && <PurchaseMobileImage />}
+            {detailsTitle === "Carfax Ratings and Reviews" && (
+              <RatingsMobileImage />
+            )}
+            {detailsTitle === "Carfax Record Check" && (
+              <RecordCheckMobileImage />
+            )}
           </div>
         </>
       </div>

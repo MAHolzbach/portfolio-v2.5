@@ -5,10 +5,10 @@ import Img from "gatsby-image"
 const VhrLandingDesktopImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "images/vhr-desktop.webp" }) {
+      placeholderImage: file(relativePath: { eq: "images/vhr-desktop.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

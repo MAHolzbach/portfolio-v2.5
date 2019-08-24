@@ -13,7 +13,7 @@ const ProjectCard = props => (
         alt="Project"
       />
     </picture>
-    <p className={projectCardStyles.cardText}>{props.description}</p>
+    {/* <p className={projectCardStyles.cardText}>{props.description}</p> */}
     <p className={projectCardStyles.cardText}>
       <strong>Tools: </strong>
       {props.tools}
@@ -22,15 +22,17 @@ const ProjectCard = props => (
       <Link className={projectCardStyles.button} to={props.page}>
         Details
       </Link>
-      <a
-        className={projectCardStyles.button}
-        href={props.url}
-        type="button"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit
-      </a>
+      {props.url !== null && (
+        <a
+          className={projectCardStyles.button}
+          href={props.url}
+          type="button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit
+        </a>
+      )}{" "}
     </div>
   </div>
 )
