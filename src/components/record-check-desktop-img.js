@@ -2,12 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const RatingsMobileImage = () => {
+const RecordCheckDesktopImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "images/rnr-mobile.png" }) {
+      placeholderImage: file(
+        relativePath: { eq: "images/record-check-desktop.png" }
+      ) {
         childImageSharp {
-          fluid(maxWidth: 900) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -18,4 +20,4 @@ const RatingsMobileImage = () => {
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
-export default RatingsMobileImage
+export default RecordCheckDesktopImage

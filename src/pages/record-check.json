@@ -1,0 +1,11 @@
+{
+  "tools": "Pug, Sass, ES5/6, Jest, and RESTful API consumption.",
+  "detailsTitle": "Carfax Record Check",
+  "visitUrl": null,
+  "detailsSubtitle": "(This page is a partner only site, and not accessible to the public.)",
+  "detailsTask": "Rebuild an old site that our partner dealerships use to purchase Vehcile History Reports for their customers, or to direct customers to Carfax for their own reports.",
+  "detailsChallenges": "Re-building one Carfax's oldest sites and keeping it as fast as the original.",
+  "detailsResults": "This site recieves #### visitors per day, and has generated #% revenue lift.",
+  "detailsComments": "A relatively straightforward static site to replace a much older site in a code base that was being retired. My goal here was to make this page as lean as possible in order to keep it fast. Some SEO considerations and image optimization were part of that, as well as creating a new endpoint for both the initial data fetch, and the email signup form.",
+  "detailsTeam": "Mike Dolan and Carol Li (designer)"
+}

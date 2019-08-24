@@ -1,5 +1,5 @@
 {
-  "tools": "React, Redux, Sass, ES6, Webpack, and RESTful API consumption.",
+  "tools": "React, Redux, Sass, ES6, Webpack, Jest/Enzyme, and RESTful API consumption.",
   "detailsTitle": "Carfax Ratings and Reviews",
   "visitUrl": "https://www.carfax.com/signin",
   "detailsSubtitle": "You can click the buttons below to view some screenshots of the site, as well as get more details on the project. Visiting the page itself will require creation of a Carfax account, which is completely free to do, here: ",
