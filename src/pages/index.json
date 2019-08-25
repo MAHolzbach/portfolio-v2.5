@@ -1,5 +1,14 @@
 [
   {
+    "cardTitle": "Carfax Hackathon App",
+    "cardImg": "hack-app.webp",
+    "altCardImg": "hack-app.jpg",
+    "cardDescription": "Carfax's dedicated in-house hackathon app.",
+    "tools": "React (with hooks and context API), Sass, ES6, Webpack, and RESTful API consumption.",
+    "cardUrl": null,
+    "cardPage": "/hackathon-app"
+  },
+  {
     "cardTitle": "Carfax VHR Landing Page",
     "cardImg": "vhr-landing.webp",
     "altCardImg": "vhr-landing.jpg",
@@ -8,7 +17,6 @@
     "cardUrl": "https://www.carfax.com/vehicle-history-reports/",
     "cardPage": "/vhr-landing"
   },
-
   {
     "cardTitle": "Carfax Showroom",
     "cardImg": "showroom.webp",

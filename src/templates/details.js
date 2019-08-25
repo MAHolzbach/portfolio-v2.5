@@ -14,6 +14,8 @@ import RatingsDesktopImage from "../components/ratings-desktop-img"
 import RatingsMobileImage from "../components/ratings-mobile-img"
 import RecordCheckDesktopImage from "../components/record-check-desktop-img"
 import RecordCheckMobileImage from "../components/record-check-mobile-img"
+import HackathonCreateTeamView from "../components/hackathon-create-team-view"
+import HackathonIdeasView from "../components/hackathon-ideas-view"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -100,7 +102,9 @@ const Details = ({ data }) => {
             ) : (
               <FaChevronRight className={detailsStyles.icon} />
             )}
-            Desktop View
+            {detailsTitle === "Carfax Hackathon App"
+              ? "Create Team"
+              : " Desktop View"}
           </button>
           <button
             id="mobileImageToggle"
@@ -112,7 +116,9 @@ const Details = ({ data }) => {
             ) : (
               <FaChevronRight className={detailsStyles.icon} />
             )}
-            Mobile View
+            {detailsTitle === "Carfax Hackathon App"
+              ? "Idea Submission"
+              : " Mobile View"}
           </button>
         </div>
         <hr />
@@ -170,14 +176,25 @@ const Details = ({ data }) => {
             {detailsTitle === "Carfax Record Check" && (
               <RecordCheckDesktopImage />
             )}
+            {detailsTitle === "Carfax Hackathon App" && (
+              <HackathonCreateTeamView />
+            )}
           </div>
           <div
-            className={`${detailsStyles.mobileImageWrapper}
+            className={
+              detailsTitle === "Carfax Hackathon App"
+                ? `${
+                    mobileImageOpen
+                      ? detailsStyles.containerOpen
+                      : detailsStyles.containerClosed
+                  }`
+                : `${detailsStyles.mobileImageWrapper}
               ${
                 mobileImageOpen
                   ? detailsStyles.containerOpen
                   : detailsStyles.containerClosed
-              }`}
+              }`
+            }
           >
             {detailsTitle === "Showroom" && <ShowroomMobileImage />}
             {detailsTitle === "Vehicle History Report Landing Page" && (
@@ -190,6 +207,7 @@ const Details = ({ data }) => {
             {detailsTitle === "Carfax Record Check" && (
               <RecordCheckMobileImage />
             )}
+            {detailsTitle === "Carfax Hackathon App" && <HackathonIdeasView />}
           </div>
         </>
       </div>
