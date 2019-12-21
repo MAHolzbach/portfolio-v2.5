@@ -1,0 +1,11 @@
+{
+  "detailsTitle": "Hacker News Clone",
+  "tools": "React (w/ hooks and context API), React Router, Sass, ES5/6, and RESTful API consumption.",
+  "visitUrl": "https://relaxed-joliot-f65991.netlify.com",
+  "detailsSubtitle": "You can click the buttons below to view some screenshots of the site, as well as get more details on the project. Or you can visit the site itself by clicking here: ",
+  "detailsTask": "Create a full clone of the Hacker News site with all functionality (minus data submission) using React, hooks, and the context API.",
+  "detailsChallenges": "Dynamically generate additional pages of stories, as well as recursively generate deeply nested comment components.",
+  "detailsResults": "It has been a fantastic learning project for React at a fairly complex level.",
+  "detailsComments": "This is still a work in progress, something I add to and tinker with for fun. But the core functionality is there: lists of the stories and their comments. Also, the styling is very nearly pixel perfect, though the actual Hacker News uses a table element, so mine, which does not, is just slightly different.",
+  "detailsTeam": "Just me!"
+}

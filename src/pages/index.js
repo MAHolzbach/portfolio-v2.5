@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
           Jenkins.
         </p>
         <hr />
-        <h2 className={indexStyles.workTitle}>Recent work</h2>
+        <h2 className={indexStyles.workTitle}>Current and Previous work</h2>
         <div className={indexStyles.indexWrapper}>
           {data.allIndexJson.edges.map(({ node }) => (
             <ProjectCard
