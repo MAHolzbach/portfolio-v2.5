@@ -16,6 +16,10 @@ import RecordCheckDesktopImage from "../components/record-check-desktop-img"
 import RecordCheckMobileImage from "../components/record-check-mobile-img"
 import HackathonCreateTeamView from "../components/hackathon-create-team-view"
 import HackathonIdeasView from "../components/hackathon-ideas-view"
+import NICBDesktopImage from "../components/nicb-desktop-img"
+import NICBMobileImage from "../components/nicb-mobile-img"
+import HackerNewsStories from "../components/hacker-news-stories-img"
+import HackerNewsComments from "../components/hacker-news-comments-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -75,7 +79,7 @@ const Details = ({ data }) => {
           {detailsSubtitle}
           {visitUrl !== null && (
             <a href={`${visitUrl}`} target="_blank" rel="noopener noreferrer">
-              Carfax
+              View Site
             </a>
           )}
         </p>
@@ -104,6 +108,8 @@ const Details = ({ data }) => {
             )}
             {detailsTitle === "Carfax Hackathon App"
               ? "Create Team"
+              : detailsTitle === "Hacker News Clone"
+              ? "Stories View"
               : " Desktop View"}
           </button>
           <button
@@ -118,6 +124,8 @@ const Details = ({ data }) => {
             )}
             {detailsTitle === "Carfax Hackathon App"
               ? "Idea Submission"
+              : detailsTitle === "Hacker News Clone"
+              ? "Comments View"
               : " Mobile View"}
           </button>
         </div>
@@ -179,10 +187,15 @@ const Details = ({ data }) => {
             {detailsTitle === "Carfax Hackathon App" && (
               <HackathonCreateTeamView />
             )}
+            {detailsTitle === "National Insurance Crime Bureau Form" && (
+              <NICBDesktopImage />
+            )}
+            {detailsTitle === "Hacker News Clone" && <HackerNewsStories />}
           </div>
           <div
             className={
-              detailsTitle === "Carfax Hackathon App"
+              detailsTitle === "Carfax Hackathon App" ||
+              detailsTitle === "Hacker News Clone"
                 ? `${
                     mobileImageOpen
                       ? detailsStyles.containerOpen
@@ -208,6 +221,10 @@ const Details = ({ data }) => {
               <RecordCheckMobileImage />
             )}
             {detailsTitle === "Carfax Hackathon App" && <HackathonIdeasView />}
+            {detailsTitle === "National Insurance Crime Bureau Form" && (
+              <NICBMobileImage />
+            )}
+            {detailsTitle === "Hacker News Clone" && <HackerNewsComments />}
           </div>
         </>
       </div>

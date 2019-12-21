@@ -48,9 +48,27 @@
     "cardTitle": "Carfax Record Check",
     "cardImg": "record-check.webp",
     "altCardImg": "record-check.jpg",
-    "cardDescription": "A total overhaul of a site that is used by Carfax's partners (dealerships mostly) to purchase Vehcile History Reports.",
+    "cardDescription": "A total overhaul of a site that is used by Carfax's partners (dealerships mostly) to purchase Vehicle History Reports.",
     "tools": "Pug, Sass, ES5/6, Jest, and RESTful API consumption.",
-    "cardUrl": null,
+    "cardUrl": "https://www.carfax.com/record-check/?partner=BDA_4&vin=JTKDE167660140438",
     "cardPage": "/record-check"
+  },
+  {
+    "cardTitle": "National Insurance Crime Bureau Form",
+    "cardImg": "NICB.webp",
+    "altCardImg": "NICB.jpg",
+    "cardDescription": "A full rebuild of a form CARFAX users can submit to report finding a vehicle that has been reported stolen.",
+    "tools": "React (w/ hooks and context API), Sass, ES5/6, Jest, and RESTful API consumption.",
+    "cardUrl": "https://www.carfax.com/contact/nicbform/",
+    "cardPage": "/nicb"
+  },
+  {
+    "cardTitle": "Hacker News Clone",
+    "cardImg": "hacker-news.webp",
+    "altCardImg": "hacker-news.jpg",
+    "cardDescription": "A Hacker News clone! (WIP)",
+    "tools": "React (w/ hooks and context API), Sass, ES5/6, and RESTful API consumption.",
+    "cardUrl": "https://relaxed-joliot-f65991.netlify.com",
+    "cardPage": "/hacker-news"
   }
 ]
