@@ -41,7 +41,7 @@ const SideNav = ({ detailsPage, siteTitle }) => (
     <div className={sideNavStyles.socialLinks}>
       <a
         className={sideNavStyles.socialLink}
-        href="https://www.dropbox.com/s/qg0d2av0ahilfim/Mike%20Holzbach%20Resume.pdf?dl=0"
+        href="https://www.dropbox.com/s/tglsuyx7z5zvy04/Mike%20Holzbach%20Resume.pdf?dl=0"
         target="_blank"
         rel="noopener noreferrer"
       >
