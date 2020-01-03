@@ -50,7 +50,7 @@
     "altCardImg": "record-check.jpg",
     "cardDescription": "A total overhaul of a site that is used by Carfax's partners (dealerships mostly) to purchase Vehicle History Reports.",
     "tools": "Pug, Sass, ES5/6, Jest, and RESTful API consumption.",
-    "cardUrl": "https://www.carfax.com/record-check/?partner=BDA_4&vin=JTKDE167660140438",
+    "cardUrl": null,
     "cardPage": "/record-check"
   },
   {
