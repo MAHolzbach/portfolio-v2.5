@@ -4,7 +4,7 @@
     "cardImg": "hack-app.webp",
     "altCardImg": "hack-app.jpg",
     "cardDescription": "Carfax's dedicated in-house hackathon app.",
-    "tools": "React (with hooks and context API), Sass, ES6, Webpack, and RESTful API consumption.",
+    "tools": "React (with hooks and context API), Sass, ES6, Webpack, Serverless, Node.js, DynamoDB, AWS Lambda, and RESTful API consumption.",
     "cardUrl": null,
     "cardPage": "/hackathon-app"
   },
