@@ -20,6 +20,11 @@ const IndexPage = ({ data }) => {
         </p>
         <hr />
         <h2 className={indexStyles.workTitle}>Current and Previous work</h2>
+        <p>
+          <strong>Note for European visitors:</strong> Due to the GDPR, I'm
+          afraid that CARFAX is forced to block European IPs. I am happy to walk
+          you through these projects via Skype!
+        </p>
         <div className={indexStyles.indexWrapper}>
           {data.allIndexJson.edges.map(({ node }) => (
             <ProjectCard
