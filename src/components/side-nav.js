@@ -65,7 +65,7 @@ const SideNav = ({ detailsPage, siteTitle }) => (
       </a>
       <a
         className={sideNavStyles.socialLink}
-        href="https://twitter.com/MAHolzbach"
+        href="https://twitter.com/HolzbachMike"
         target="_blank"
         rel="noopener noreferrer"
       >
