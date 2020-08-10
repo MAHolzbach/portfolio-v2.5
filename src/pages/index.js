@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => {
         <p>
           I'm a front-end web developer specializing in React and pixel perfect
           CSS. I have extensive experience working in an Agile environment using
-          HTML5, CSS3/Sass, ES5/ES6, React, Redux, Git, and Webpack.
-          Additionally, I am familiar with Node.js and Express, AWS, and
+          HTML5, CSS3/Sass, ES5/ES6, React, Redux, Vue, Git, and Webpack.
+          Additionally, I am familiar with Gatsby, Node.js and Express, AWS, and
           Jenkins.
         </p>
         <hr />
