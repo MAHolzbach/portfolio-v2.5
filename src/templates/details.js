@@ -20,6 +20,10 @@ import NICBDesktopImage from "../components/nicb-desktop-img"
 import NICBMobileImage from "../components/nicb-mobile-img"
 import HackerNewsStories from "../components/hacker-news-stories-img"
 import HackerNewsComments from "../components/hacker-news-comments-img"
+import SwagAppForm from "../components/swag-app-form-img"
+import SwagAppCustomize from "../components/swag-app-customize-img"
+import CoinhubDesktopImage from "../components/coinhub-desktop-img"
+import CoinhubMobileImage from "../components/coinhub-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -35,6 +39,7 @@ const Details = ({ data }) => {
     detailsComments,
     detailsTeam,
     visitUrl,
+    repoUrl,
   } = data.pagesJson
 
   const handleToggleClick = e => {
@@ -110,6 +115,8 @@ const Details = ({ data }) => {
               ? "Create Team"
               : detailsTitle === "Hacker News Clone"
               ? "Stories View"
+              : detailsTitle === "The Swag App"
+              ? "Form View"
               : " Desktop View"}
           </button>
           <button
@@ -126,6 +133,8 @@ const Details = ({ data }) => {
               ? "Idea Submission"
               : detailsTitle === "Hacker News Clone"
               ? "Comments View"
+              : detailsTitle === "The Swag App"
+              ? "Customize View"
               : " Mobile View"}
           </button>
         </div>
@@ -138,6 +147,14 @@ const Details = ({ data }) => {
           }
           id="infoTextWrapper"
         >
+          {repoUrl !== null && (
+            <p className={detailsStyles.text}>
+              <span className={detailsStyles.boldText}>Source Code: </span>
+              <a href={repoUrl} target="_blank">
+                {detailsTitle}
+              </a>
+            </p>
+          )}
           <p className={detailsStyles.text}>
             <span className={detailsStyles.boldText}>Tools: </span>
             {tools}
@@ -191,11 +208,14 @@ const Details = ({ data }) => {
               <NICBDesktopImage />
             )}
             {detailsTitle === "Hacker News Clone" && <HackerNewsStories />}
+            {detailsTitle === "The Swag App" && <SwagAppForm />}
+            {detailsTitle === "CoinHub" && <CoinhubDesktopImage />}
           </div>
           <div
             className={
               detailsTitle === "Carfax Hackathon App" ||
-              detailsTitle === "Hacker News Clone"
+              detailsTitle === "Hacker News Clone" ||
+              detailsTitle === "The Swag App"
                 ? `${
                     mobileImageOpen
                       ? detailsStyles.containerOpen
@@ -225,6 +245,8 @@ const Details = ({ data }) => {
               <NICBMobileImage />
             )}
             {detailsTitle === "Hacker News Clone" && <HackerNewsComments />}
+            {detailsTitle === "The Swag App" && <SwagAppCustomize />}
+            {detailsTitle === "CoinHub" && <CoinhubMobileImage />}
           </div>
         </>
       </div>
@@ -246,6 +268,7 @@ export const query = graphql`
       detailsTitle
       tools
       visitUrl
+      repoUrl
     }
   }
 `

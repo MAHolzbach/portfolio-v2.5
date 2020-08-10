@@ -10,34 +10,67 @@ const IndexPage = ({ data }) => {
     <Layout detailsPage={false}>
       <SEO title="Home" />
       <div className={indexStyles.index}>
-        <h2 className={indexStyles.title}>What I do</h2>
+        <h2 className={indexStyles.title}>What I Do</h2>
         <p>
           I'm a front-end web developer specializing in React and pixel perfect
           CSS. I have extensive experience working in an Agile environment using
           HTML5, CSS3/Sass, ES5/ES6, React, Redux, Vue, Git, and Webpack.
-          Additionally, I am familiar with Gatsby, Node.js and Express, AWS, and
-          Jenkins.
+          Additionally, I am familiar with Netlify, Contentful, Gatsby, Node.js
+          and Express, AWS, and Jenkins.
         </p>
         <hr />
-        <h2 className={indexStyles.workTitle}>Current and Previous work</h2>
+        <h2 className={indexStyles.workTitle}>Professional Work</h2>
         <p>
           <strong>Note for European visitors:</strong> Due to the GDPR, I'm
           afraid that CARFAX is forced to block European IPs. I am happy to walk
           you through these projects via Skype!
         </p>
         <div className={indexStyles.indexWrapper}>
-          {data.allIndexJson.edges.map(({ node }) => (
-            <ProjectCard
-              key={node.id}
-              title={node.cardTitle}
-              img={require("../images/" + node.cardImg)}
-              altImg={require("../images/" + node.altCardImg)}
-              description={node.cardDescription}
-              tools={node.tools}
-              url={node.cardUrl}
-              page={node.cardPage}
-            />
-          ))}
+          {data.allIndexJson.edges.map(({ node }) => {
+            return node.projectType === "professional" ? (
+              <ProjectCard
+                key={node.id}
+                title={node.cardTitle}
+                img={require("../images/" + node.cardImg)}
+                altImg={require("../images/" + node.altCardImg)}
+                description={node.cardDescription}
+                tools={node.tools}
+                url={node.cardUrl}
+                page={node.cardPage}
+              />
+            ) : (
+              ""
+            )
+          })}
+        </div>
+        <hr />
+        <h2 className={indexStyles.workTitle}>Personal Projects</h2>
+        <p>
+          Here are a few of the personal projects I've recently tinkered with.
+          Some are just demos, others are simply practice/learing opportunities.
+          Also, you can see the source code for this site, built in Gatsby,
+          here:{" "}
+          <a href="https://github.com/MAHolzbach/portfolio-v2" target="_blank">
+            Portfolio Repo
+          </a>
+        </p>
+        <div className={indexStyles.indexWrapper}>
+          {data.allIndexJson.edges.map(({ node }) => {
+            return node.projectType === "personal" ? (
+              <ProjectCard
+                key={node.id}
+                title={node.cardTitle}
+                img={require("../images/" + node.cardImg)}
+                altImg={require("../images/" + node.altCardImg)}
+                description={node.cardDescription}
+                tools={node.tools}
+                url={node.cardUrl}
+                page={node.cardPage}
+              />
+            ) : (
+              ""
+            )
+          })}
         </div>
       </div>
     </Layout>
@@ -51,6 +84,7 @@ export const query = graphql`
     allIndexJson {
       edges {
         node {
+          projectType
           cardDescription
           cardImg
           altCardImg
