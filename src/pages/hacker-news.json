@@ -7,5 +7,6 @@
   "detailsChallenges": "Dynamically generate additional pages of stories, as well as recursively generate deeply nested comment components.",
   "detailsResults": "It has been a fantastic learning project for React at a fairly complex level.",
   "detailsComments": "This is still a work in progress, something I add to and tinker with for fun. But the core functionality is there: lists of the stories and their comments. Also, the styling is very nearly pixel perfect, though the actual Hacker News uses a table element, so mine, which does not, is just slightly different.",
-  "detailsTeam": "Just me!"
+  "detailsTeam": "Just me!",
+  "repoUrl": "https://github.com/MAHolzbach/hacker-news-clone"
 }

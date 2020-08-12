@@ -1,5 +1,6 @@
 [
   {
+    "projectType": "professional",
     "cardTitle": "Carfax Hackathon App",
     "cardImg": "hack-app.webp",
     "altCardImg": "hack-app.jpg",
@@ -9,6 +10,7 @@
     "cardPage": "/hackathon-app"
   },
   {
+    "projectType": "professional",
     "cardTitle": "Carfax VHR Landing Page",
     "cardImg": "vhr-landing.webp",
     "altCardImg": "vhr-landing.jpg",
@@ -18,6 +20,7 @@
     "cardPage": "/vhr-landing"
   },
   {
+    "projectType": "professional",
     "cardTitle": "Carfax Showroom",
     "cardImg": "showroom.webp",
     "altCardImg": "showroom.jpg",
@@ -27,6 +30,7 @@
     "cardPage": "/showroom"
   },
   {
+    "projectType": "professional",
     "cardTitle": "Carfax Ratings and Reviews",
     "cardImg": "ratings-and-reviews.webp",
     "altCardImg": "ratings-and-reviews.jpg",
@@ -36,6 +40,7 @@
     "cardPage": "/ratings-and-reviews"
   },
   {
+    "projectType": "professional",
     "cardTitle": "Carfax Purchase Page",
     "cardImg": "purchase.webp",
     "altCardImg": "purchase.jpg",
@@ -45,6 +50,7 @@
     "cardPage": "/purchase-page"
   },
   {
+    "projectType": "professional",
     "cardTitle": "Carfax Record Check",
     "cardImg": "record-check.webp",
     "altCardImg": "record-check.jpg",
@@ -54,6 +60,7 @@
     "cardPage": "/record-check"
   },
   {
+    "projectType": "professional",
     "cardTitle": "National Insurance Crime Bureau Form",
     "cardImg": "NICB.webp",
     "altCardImg": "NICB.jpg",
@@ -63,6 +70,17 @@
     "cardPage": "/nicb"
   },
   {
+    "projectType": "professional",
+    "cardTitle": "The Swag App",
+    "cardImg": "swag-app.webp",
+    "altCardImg": "swag-app.jpg",
+    "cardDescription": "Carfax internal application for generating sales leads at major car and dealership coventions.",
+    "tools": "Vue, ES5/6, Firebase, and RESTful API consumption.",
+    "cardUrl": null,
+    "cardPage": "/swag-app"
+  },
+  {
+    "projectType": "personal",
     "cardTitle": "Hacker News Clone",
     "cardImg": "hacker-news.webp",
     "altCardImg": "hacker-news.jpg",
@@ -70,5 +88,15 @@
     "tools": "React (w/ hooks and context API), Sass, ES5/6, and RESTful API consumption.",
     "cardUrl": "https://relaxed-joliot-f65991.netlify.com",
     "cardPage": "/hacker-news"
+  },
+  {
+    "projectType": "personal",
+    "cardTitle": "CoinHub",
+    "cardImg": "coinhub.webp",
+    "altCardImg": "coinhub.jpg",
+    "cardDescription": "Crypto dashboard demo",
+    "tools": "React (w/ hooks and context API), Sass, ES5/6, Serverless, Node.js/Express.",
+    "cardUrl": "https://agitated-kowalevski-9c9630.netlify.app",
+    "cardPage": "/coinhub"
   }
 ]
