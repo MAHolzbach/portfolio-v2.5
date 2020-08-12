@@ -7,6 +7,8 @@
   "detailsChallenges": "To make the dashboard look the same as the Dribbble shot without actual mocks. To build my own tiny backend service.",
   "detailsResults": "A good fullstack project for React and Express, using the Serverless framework.",
   "detailsComments": "I simply found a nice looking shot on Dribbble and decided to build out some of it. So far this has quite limited functionality, but the price data is accurate (from https://www.coinapi.io/). There are no shots for any of the the other views, so I'm not sure I'll add those. Nor was there a mobile shot, so I just flexbox the whole site. Serverless rocks. I decided to put the CoinAPI I am using here behind my own little backend service just for practice.",
-  "detailsTeam": "Rajib Raju, designer (Dribbble shot here: https://dribbble.com/shots/5720306-Crypto-Dashboard-exploration/attachments)",
-  "repoUrl": "https://github.com/MAHolzbach/coinhub"
+  "detailsTeam": "Not a team here, but Rajib Raju is the designer: ",
+  "repoUrl": "https://github.com/MAHolzbach/coinhub",
+  "otherUrlText": "Rajib's Dribbble shot can be seen here: ",
+  "otherUrl": "https://dribbble.com/shots/5720306-Crypto-Dashboard-exploration/attachments"
 }

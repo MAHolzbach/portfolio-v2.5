@@ -40,6 +40,8 @@ const Details = ({ data }) => {
     detailsTeam,
     visitUrl,
     repoUrl,
+    otherUrlText,
+    otherUrl,
   } = data.pagesJson
 
   const handleToggleClick = e => {
@@ -178,6 +180,13 @@ const Details = ({ data }) => {
           <p className={detailsStyles.text}>
             <span className={detailsStyles.boldText}>Team Members: </span>
             {detailsTeam}
+            {otherUrl ? (
+              <a href={otherUrl} target="_blank">
+                Rajib's Dribbble Shot
+              </a>
+            ) : (
+              ""
+            )}
           </p>
         </div>
         <>
@@ -269,6 +278,8 @@ export const query = graphql`
       tools
       visitUrl
       repoUrl
+      otherUrlText
+      otherUrl
     }
   }
 `

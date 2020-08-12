@@ -47,9 +47,9 @@ const IndexPage = ({ data }) => {
         <h2 className={indexStyles.workTitle}>Personal Projects</h2>
         <p>
           Here are a few of the personal projects I've recently tinkered with.
-          Some are just demos, others are simply practice/learing opportunities.
-          Also, you can see the source code for this site, built in Gatsby,
-          here:{" "}
+          Some are just demos, others are simply practice/learing opportunities,
+          but all are still works in progress. Also, you can see the source code
+          for this portfolio site, built in Gatsby, here:{" "}
           <a href="https://github.com/MAHolzbach/portfolio-v2" target="_blank">
             Portfolio Repo
           </a>

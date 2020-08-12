@@ -96,7 +96,7 @@
     "altCardImg": "coinhub.jpg",
     "cardDescription": "Crypto dashboard demo",
     "tools": "React (w/ hooks and context API), Sass, ES5/6, Serverless, Node.js/Express.",
-    "cardUrl": "https://agitated-kowalevski-9c9630.netlify.app/",
+    "cardUrl": "https://agitated-kowalevski-9c9630.netlify.app",
     "cardPage": "/coinhub"
   }
 ]
