@@ -63,14 +63,6 @@ const SideNav = ({ detailsPage, siteTitle }) => (
       >
         <FaGithub />
       </a>
-      <a
-        className={sideNavStyles.socialLink}
-        href="https://twitter.com/MikeHolzbach"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter />
-      </a>
     </div>
   </div>
 )
