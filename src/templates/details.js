@@ -24,6 +24,8 @@ import SwagAppForm from "../components/swag-app-form-img"
 import SwagAppCustomize from "../components/swag-app-customize-img"
 import CoinhubDesktopImage from "../components/coinhub-desktop-img"
 import CoinhubMobileImage from "../components/coinhub-mobile-img"
+import JobSlobDesktopImage from "../components/jobslob-desktop-img"
+import JobSlobMobileImage from "../components/jobslob-mobile-img"
 
 const Details = ({ data }) => {
   const [infoTextOpen, setInfoTextOpen] = useState(true)
@@ -182,7 +184,7 @@ const Details = ({ data }) => {
             {detailsTeam}
             {otherUrl ? (
               <a href={otherUrl} target="_blank">
-                Rajib's Dribbble Shot
+                See Here
               </a>
             ) : (
               ""
@@ -219,6 +221,7 @@ const Details = ({ data }) => {
             {detailsTitle === "Hacker News Clone" && <HackerNewsStories />}
             {detailsTitle === "The Swag App" && <SwagAppForm />}
             {detailsTitle === "CoinHub" && <CoinhubDesktopImage />}
+            {detailsTitle === "JobSlob" && <JobSlobDesktopImage />}
           </div>
           <div
             className={
@@ -256,6 +259,7 @@ const Details = ({ data }) => {
             {detailsTitle === "Hacker News Clone" && <HackerNewsComments />}
             {detailsTitle === "The Swag App" && <SwagAppCustomize />}
             {detailsTitle === "CoinHub" && <CoinhubMobileImage />}
+            {detailsTitle === "JobSlob" && <JobSlobMobileImage />}
           </div>
         </>
       </div>
