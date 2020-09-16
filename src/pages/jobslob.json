@@ -1,0 +1,14 @@
+{
+  "detailsTitle": "JobSlob",
+  "tools": "Vue, Vuex, Tailwind.css, ES5/6",
+  "visitUrl": "https://hopeful-minsky-2a0b3c.netlify.app/",
+  "detailsSubtitle": "You can click the buttons below to view some screenshots of the site, as well as get more details on the project. Or you can visit the site itself by clicking here: ",
+  "detailsTask": "Create a job board using GitHub's API in order to expand my knowledge of Vue.",
+  "detailsChallenges": "The mobile look was entirely from my own head, as there was no mock at all for that. Also, getting used to the Vue way, and learning Vuex and Tailwind (lots of time in the docs on this one).",
+  "detailsResults": "This has greatly expanded my Vue skillset, as well as getting me familiar with Vuex and Tailwind.css",
+  "detailsComments": "This project has shown me that the hype for Vue is real, it is definitely a great tool that feels like a middle ground between React and Angular. And Vuex was fantastic, definitely the easiest state management tool I've ever used. Tailwind.css is a very neat styling framework, that can greatly speed up prototyping, though I think it is not the right tool for all cases. Finally, this site simulates the existence of a backend in a few spots (jobs applied to, and the initial recent searches, for example) with the use of hard coded values.",
+  "detailsTeam": "This was a personal project, but the desktop design was based on Dmitriy Kharaberyush's Dribbble shot: ",
+  "repoUrl": "https://github.com/MAHolzbach/job-slob",
+  "otherUrlText": "Dmitriy Kharaberyush's Dribbble shot can be seen here: ",
+  "otherUrl": "https://dribbble.com/shots/8369503-WorkFinder-Job-Board-Platform/attachments/691680?mode=media"
+}

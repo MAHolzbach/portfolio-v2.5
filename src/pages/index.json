@@ -84,7 +84,7 @@
     "cardTitle": "Hacker News Clone",
     "cardImg": "hacker-news.webp",
     "altCardImg": "hacker-news.jpg",
-    "cardDescription": "A Hacker News clone! (WIP)",
+    "cardDescription": "A Hacker News clone",
     "tools": "React (w/ hooks and context API), Sass, ES5/6, and RESTful API consumption.",
     "cardUrl": "https://relaxed-joliot-f65991.netlify.com",
     "cardPage": "/hacker-news"
@@ -98,5 +98,15 @@
     "tools": "React (w/ hooks and context API), Sass, ES5/6, Serverless, Node.js/Express.",
     "cardUrl": "https://agitated-kowalevski-9c9630.netlify.app",
     "cardPage": "/coinhub"
+  },
+  {
+    "projectType": "personal",
+    "cardTitle": "JobSlob",
+    "cardImg": "jobslob.webp",
+    "altCardImg": "jobslob.jpg",
+    "cardDescription": "A job board that uses GutHub's API",
+    "tools": "Vue, Vuex, Tailwind.css, ES5/6",
+    "cardUrl": "https://hopeful-minsky-2a0b3c.netlify.app/",
+    "cardPage": "/jobslob"
   }
 ]
