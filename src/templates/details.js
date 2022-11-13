@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import detailsStyles from "./details.module.scss"
+import "./details.scss"
 import { FaArrowLeft, FaChevronRight, FaChevronDown } from "react-icons/fa"
 import ShowroomDesktopImage from "../components/showroom-desktop-img"
 import ShowroomMobileImage from "../components/showroom-mobile-img"
@@ -46,7 +46,7 @@ const Details = ({ data }) => {
     otherUrl,
   } = data.pagesJson
 
-  const handleToggleClick = e => {
+  const handleToggleClick = (e) => {
     const isMobile = window.innerWidth <= 426
 
     switch (e.target.id) {
@@ -78,13 +78,13 @@ const Details = ({ data }) => {
 
   return (
     <Layout detailsPage={true}>
-      <div className={detailsStyles.container}>
-        <Link className={detailsStyles.homeLink} to="/">
-          <FaArrowLeft className={detailsStyles.icon} />
+      <div className="container">
+        <Link className="homeLink" to="/">
+          <FaArrowLeft className="icon" />
           Back
         </Link>
-        <h1 className={detailsStyles.projectTitle}>{detailsTitle}</h1>
-        <p className={detailsStyles.subtitle}>
+        <h1 className="projectTitle">{detailsTitle}</h1>
+        <p className="subtitle">
           {detailsSubtitle}
           {visitUrl !== null && (
             <a href={`${visitUrl}`} target="_blank" rel="noopener noreferrer">
@@ -92,28 +92,28 @@ const Details = ({ data }) => {
             </a>
           )}
         </p>
-        <div className={detailsStyles.toggleWrapper}>
+        <div className="toggleWrapper">
           <button
             id="textToggle"
-            className={detailsStyles.infoToggle}
-            onClick={e => handleToggleClick(e)}
+            className="infoToggle"
+            onClick={(e) => handleToggleClick(e)}
           >
             {infoTextOpen ? (
-              <FaChevronDown className={detailsStyles.icon} />
+              <FaChevronDown className="icon" />
             ) : (
-              <FaChevronRight className={detailsStyles.icon} />
+              <FaChevronRight className="icon" />
             )}
             Project Details
           </button>
           <button
             id="desktopImageToggle"
-            className={detailsStyles.infoToggle}
-            onClick={e => handleToggleClick(e)}
+            className="infoToggle"
+            onClick={(e) => handleToggleClick(e)}
           >
             {desktopImageOpen ? (
-              <FaChevronDown className={detailsStyles.icon} />
+              <FaChevronDown className="icon" />
             ) : (
-              <FaChevronRight className={detailsStyles.icon} />
+              <FaChevronRight className="icon" />
             )}
             {detailsTitle === "Carfax Hackathon App"
               ? "Create Team"
@@ -125,13 +125,13 @@ const Details = ({ data }) => {
           </button>
           <button
             id="mobileImageToggle"
-            className={detailsStyles.infoToggle}
-            onClick={e => handleToggleClick(e)}
+            className="infoToggle"
+            onClick={(e) => handleToggleClick(e)}
           >
             {mobileImageOpen ? (
-              <FaChevronDown className={detailsStyles.icon} />
+              <FaChevronDown className="icon" />
             ) : (
-              <FaChevronRight className={detailsStyles.icon} />
+              <FaChevronRight className="icon" />
             )}
             {detailsTitle === "Carfax Hackathon App"
               ? "Idea Submission"
@@ -144,43 +144,39 @@ const Details = ({ data }) => {
         </div>
         <hr />
         <div
-          className={
-            infoTextOpen
-              ? detailsStyles.containerOpen
-              : detailsStyles.containerClosed
-          }
+          className={infoTextOpen ? "containerOpen" : "containerClosed"}
           id="infoTextWrapper"
         >
           {repoUrl !== null && (
-            <p className={detailsStyles.text}>
-              <span className={detailsStyles.boldText}>Source Code: </span>
+            <p className="text">
+              <span className="boldText">Source Code: </span>
               <a href={repoUrl} target="_blank">
                 {detailsTitle}
               </a>
             </p>
           )}
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Tools: </span>
+          <p className="text">
+            <span className="boldText">Tools: </span>
             {tools}
           </p>
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Task: </span>
+          <p className="text">
+            <span className="boldText">Task: </span>
             {detailsTask}
           </p>
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Challenges: </span>
+          <p className="text">
+            <span className="boldText">Challenges: </span>
             {detailsChallenges}
           </p>
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Results: </span>
+          <p className="text">
+            <span className="boldText">Results: </span>
             {detailsResults}
           </p>
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Comments: </span>
+          <p className="text">
+            <span className="boldText">Comments: </span>
             {detailsComments}
           </p>
-          <p className={detailsStyles.text}>
-            <span className={detailsStyles.boldText}>Team Members: </span>
+          <p className="text">
+            <span className="boldText">Team Members: </span>
             {detailsTeam}
             {otherUrl ? (
               <a href={otherUrl} target="_blank">
@@ -193,11 +189,7 @@ const Details = ({ data }) => {
         </div>
         <>
           <div
-            className={
-              desktopImageOpen
-                ? detailsStyles.containerOpen
-                : detailsStyles.containerClosed
-            }
+            className={desktopImageOpen ? "containerOpen" : "containerClosed"}
           >
             {detailsTitle === "Showroom" && <ShowroomDesktopImage />}
             {detailsTitle === "Vehicle History Report Landing Page" && (
@@ -228,17 +220,9 @@ const Details = ({ data }) => {
               detailsTitle === "Carfax Hackathon App" ||
               detailsTitle === "Hacker News Clone" ||
               detailsTitle === "The Swag App"
-                ? `${
-                    mobileImageOpen
-                      ? detailsStyles.containerOpen
-                      : detailsStyles.containerClosed
-                  }`
-                : `${detailsStyles.mobileImageWrapper}
-              ${
-                mobileImageOpen
-                  ? detailsStyles.containerOpen
-                  : detailsStyles.containerClosed
-              }`
+                ? `${mobileImageOpen ? "containerOpen" : "containerClosed"}`
+                : `${"mobileImageWrapper"}
+              ${mobileImageOpen ? "containerOpen" : "containerClosed"}`
             }
           >
             {detailsTitle === "Showroom" && <ShowroomMobileImage />}
@@ -270,7 +254,7 @@ const Details = ({ data }) => {
 export default Details
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     pagesJson(fields: { slug: { eq: $slug } }) {
       detailsComments
       detailsResults

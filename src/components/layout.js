@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import layoutStyles from "./layout.module.scss"
 import SideNav from "./side-nav"
+import "./layout.scss"
 import "./layout.css"
 
 const Layout = ({ detailsPage, children }) => {
@@ -18,12 +18,12 @@ const Layout = ({ detailsPage, children }) => {
 
   return (
     <>
-      <div className={layoutStyles.layoutWrapper}>
+      <div className="layoutWrapper">
         <SideNav
           siteTitle={data.site.siteMetadata.title}
           detailsPage={detailsPage}
         />
-        <main className={layoutStyles.mainWrapper}>{children}</main>
+        <main className="mainWrapper">{children}</main>
       </div>
     </>
   )

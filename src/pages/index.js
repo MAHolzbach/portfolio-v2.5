@@ -2,15 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import indexStyles from "./index.module.scss"
+import "./index.scss"
 import ProjectCard from "../components/project-card"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout detailsPage={false}>
       <SEO title="Home" />
-      <div className={indexStyles.index}>
-        <h2 className={indexStyles.title}>What I Do</h2>
+      <div className="index">
+        <h2 className="title">What I Do</h2>
         <p>
           I'm a front-end web developer specializing in React and pixel perfect
           CSS. I have extensive experience working in an Agile environment using
@@ -19,13 +19,13 @@ const IndexPage = ({ data }) => {
           and Express, AWS, and Jenkins.
         </p>
         <hr />
-        <h2 className={indexStyles.workTitle}>Professional Work</h2>
+        <h2 className="workTitle">Professional Work</h2>
         <p>
           <strong>Note for European visitors:</strong> Due to the GDPR, I'm
           afraid that CARFAX is forced to block European IPs. I am happy to walk
           you through these projects via Skype!
         </p>
-        <div className={indexStyles.indexWrapper}>
+        <div className="indexWrapper">
           {data.allIndexJson.edges.map(({ node }) => {
             return node.projectType === "professional" ? (
               <ProjectCard
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
           })}
         </div>
         <hr />
-        <h2 className={indexStyles.workTitle}>Personal Projects</h2>
+        <h2 className="workTitle">Personal Projects</h2>
         <p>
           Here are a few of the personal projects I've recently tinkered with.
           Some are just demos, others are simply practice/learing opportunities,
@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
             Portfolio Repo
           </a>
         </p>
-        <div className={indexStyles.indexWrapper}>
+        <div className="indexWrapper">
           {data.allIndexJson.edges.map(({ node }) => {
             return node.projectType === "personal" ? (
               <ProjectCard
