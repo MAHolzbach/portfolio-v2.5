@@ -21,9 +21,9 @@ const IndexPage = ({ data }) => {
         <hr />
         <h2 className="workTitle">Professional Work</h2>
         <p>
-          <strong>Note for European visitors:</strong> Due to the GDPR, I'm
-          afraid that CARFAX is forced to block European IPs. I am happy to walk
-          you through these projects via Skype!
+          <strong>Note for European visitors:</strong> Due to GDPR, Carfax
+          directs European IPs to their European site. I am happy to walk you
+          through these projects on a call!
         </p>
         <div className="indexWrapper">
           {data.allIndexJson.edges.map(({ node }) => {
@@ -50,7 +50,11 @@ const IndexPage = ({ data }) => {
           Some are just demos, others are simply practice/learing opportunities,
           but all are still works in progress. Also, you can see the source code
           for this portfolio site, built in Gatsby, here:{" "}
-          <a href="https://github.com/MAHolzbach/portfolio-v2" target="_blank">
+          <a
+            href="https://github.com/MAHolzbach/portfolio-v2.5"
+            target="_blank"
+            rel="noreferrer"
+          >
             Portfolio Repo
           </a>
         </p>
