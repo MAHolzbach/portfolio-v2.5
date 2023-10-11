@@ -4,7 +4,7 @@ import "./project-card.scss"
 
 const ProjectCard = (props) => (
   <div className="card">
-    {console.log(props)} <h2 className="cardTitle">{props.title}</h2>
+    <h2 className="cardTitle">{props.title}</h2>
     <picture>
       <source srcSet={props.img.default} type="image/webp" />
       <img className="cardImage" src={props.altImg} alt="Project" />
@@ -28,7 +28,7 @@ const ProjectCard = (props) => (
         >
           Visit
         </a>
-      )}{" "}
+      )}
     </div>
   </div>
 )
