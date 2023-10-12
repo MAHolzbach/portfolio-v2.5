@@ -6,6 +6,12 @@ import "./index.scss"
 import ProjectCard from "../components/project-card"
 
 const IndexPage = ({ data }) => {
+  const personalProjects = data.allIndexJson.edges.filter(({ node }) => {
+    if (node.projectType === "personal") {
+      return node
+    }
+  })
+
   return (
     <Layout detailsPage={false}>
       <SEO title="Home" />
@@ -38,44 +44,43 @@ const IndexPage = ({ data }) => {
                 url={node.cardUrl}
                 page={node.cardPage}
               />
-            ) : (
-              ""
-            )
+            ) : null
           })}
         </div>
-        <hr />
-        <h2 className="workTitle">Personal Projects</h2>
-        <p>
-          Here are a few of the personal projects I've recently tinkered with.
-          Some are just demos, others are simply practice/learing opportunities,
-          but all are still works in progress. Also, you can see the source code
-          for this portfolio site, built in Gatsby, here:{" "}
-          <a
-            href="https://github.com/MAHolzbach/portfolio-v2.5"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Portfolio Repo
-          </a>
-        </p>
-        <div className="indexWrapper">
-          {data.allIndexJson.edges.map(({ node }) => {
-            return node.projectType === "personal" ? (
-              <ProjectCard
-                key={node.id}
-                title={node.cardTitle}
-                img={require("../images/" + node.cardImg)}
-                altImg={require("../images/" + node.altCardImg)}
-                description={node.cardDescription}
-                tools={node.tools}
-                url={node.cardUrl}
-                page={node.cardPage}
-              />
-            ) : (
-              ""
-            )
-          })}
-        </div>
+        {personalProjects.length ? (
+          <>
+            <hr />
+            <h2 className="workTitle">Personal Projects</h2>
+            <p>
+              Here are a few of the personal projects I've recently tinkered
+              with. Some are just demos, others are simply practice/learing
+              opportunities, but all are still works in progress. Also, you can
+              see the source code for this portfolio site, built in Gatsby,
+              here:{" "}
+              <a
+                href="https://github.com/MAHolzbach/portfolio-v2.5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Portfolio Repo
+              </a>
+            </p>
+            <div className="indexWrapper">
+              {personalProjects.map(({ node }) => (
+                <ProjectCard
+                  key={node.id}
+                  title={node.cardTitle}
+                  img={require("../images/" + node.cardImg)}
+                  altImg={require("../images/" + node.altCardImg)}
+                  description={node.cardDescription}
+                  tools={node.tools}
+                  url={node.cardUrl}
+                  page={node.cardPage}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
       </div>
     </Layout>
   )
