@@ -1,6 +1,26 @@
 [
   {
     "projectType": "professional",
+    "cardTitle": "Elinvar Advisor PaaS",
+    "cardImg": "bapp-card-img.webp",
+    "altCardImg": "bapp-card-img.jpg",
+    "cardDescription": "Elinvar's financial management platform for investment advisors.",
+    "tools": "React 18, Typescript, ES6, Styled Components, Jest, TAN Stack Query",
+    "cardUrl": null,
+    "cardPage": "/elinvar-bapp"
+  },
+  {
+    "projectType": "professional",
+    "cardTitle": "Elinvar Client Portal",
+    "cardImg": "capp-card-img.webp",
+    "altCardImg": "capp-card-img.jpg",
+    "cardDescription": "Elinvar's portal for individual investors.",
+    "tools": "React 18, Typescript, ES6, Styled Components, Jest, TAN Stack Query",
+    "cardUrl": null,
+    "cardPage": "/elinvar-capp"
+  },
+  {
+    "projectType": "professional",
     "cardTitle": "Carfax Hackathon App",
     "cardImg": "hack-app.webp",
     "altCardImg": "hack-app.jpg",
